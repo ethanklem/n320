@@ -1,0 +1,97 @@
+/* start animation that affects whole body */
+
+body {
+  animation: start 5s;
+  animation-fill-mode: forwards;
+}
+
+/* keyframe for start animation */
+@keyframes start {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#title {
+  width: 100%;
+}
+
+h1 {
+  margin-left: 15px;
+  font-size: 60px;
+  color: rgb(5, 34, 92);
+}
+
+#rect {
+  width: 100%;
+  margin-left: -8px;
+}
+
+.rectangle {
+  width: 950px;
+  height: 145px;
+  background-color: rgb(5, 34, 92);
+}
+
+#gallery {
+  display: flex;
+  flex-flow: row wrap;
+  width: 1000px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: rgb(146, 39, 143);
+  width: 280px;
+  height: 160px;
+  margin: 15px 15px 15px 15px;
+}
+
+/* card classes for the animation names/speed and fill mode as forwards */
+
+.oncard {
+  animation: onCard 1s;
+  animation-fill-mode: forwards;
+}
+
+.offcard {
+  animation: offCard 1s;
+  animation-fill-mode: forwards;
+}
+
+.clickcard {
+  animation: clickCard 1s;
+  animation-fill-mode: forwards;
+}
+
+/* keyframes for all of the card animations, changes cards state before and after something occurs */
+@keyframes onCard {
+  from {
+    background-color: rgb(146, 39, 143);
+  }
+
+  to {
+    background-color: rgb(226, 232, 63);
+  }
+}
+
+@keyframes offCard {
+  from {
+    background-color: rgb(226, 232, 63);
+  }
+
+  to {
+    background-color: rgb(146, 39, 143);
+  }
+}
+
+@keyframes clickCard {
+  to {
+    opacity: 0;
+  }
+}
